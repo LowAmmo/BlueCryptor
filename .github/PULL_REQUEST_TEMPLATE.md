@@ -1,20 +1,64 @@
-<!--- Provide a general summary of your changes in the Title above -->
+### JIRA
 
-## Description
-<!--- Describe your changes in detail -->
+<!--- link to the JIRA --->
+https://jira2.cerner.com/browse/CONNECT-
 
-## Motivation and Context
-<!--- Why is this change required? What problem does it solve? -->
-<!--- If it fixes an open issue, please link to the issue here. -->
+### Code Review
 
-## How Has This Been Tested?
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of your testing environment, and the tests you ran to -->
-<!--- see how your change affects other areas of the code, etc. -->
+<!--- link to code review or comment "This PR" --->
+<!--- http://crucible02.cerner.com/viewer/cru/DWX-RDT- -->
+This PR
 
-## Checklist:
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] I have submitted a [CLA form](https://github.com/IBM-Swift/CLA)
-- [ ] If applicable, I have updated the documentation accordingly.
-- [ ] If applicable, I have added tests to cover my changes.
+### Dependencies
+
+<!--- link to any dependent pull requests with a bulleted list --->
+* careaware-connect/careaware-scripts-ios#1
+
+### Checklist
+
+#### Pull Request
+
+- [ ] JIRA in commit title with `[ ]`'s
+- [ ] Link to JIRA in Pull Request
+- [ ] Link to dependent pull requests
+- [ ] Updated with latest changes from `parent branch`
+- [ ] Successful build
+
+
+#### JIRA
+
+- [ ] Fix version(s) on the JIRA
+- [ ] Component(s) on the JIRA
+- [ ] JIRA has link to Code Review & this Pull Request
+
+
+##### Process
+<!--- Remove this section for Release Reviews --->
+
+- [ ] JIRA Status is 'In Review'
+- [ ] Story JIRA has epic link
+- [ ] Process JIRA Code Subtask Updated
+- [ ] DIO Form Updated
+- [ ] Process JIRA Engineering Testing Completed
+
+
+#### Design
+<!--- Remove this section for Release Reviews --->
+
+- [ ] Design documented on JIRA
+- [ ] Process JIRA (Epic) links to Design Wiki
+  - Changes: Link to the diff, describe changes
+  - No Changes: Get +1's
+
+
+#### Engineering Testing
+<!--- Remove this section for Release Reviews --->
+
+- [ ] Merged to 'eng' branch
+- [ ] Engineering Testing Completed
+
+
+#### QA Testing
+<!--- Remove this section for Release Reviews --->
+
+- [ ] QA Testing Completed

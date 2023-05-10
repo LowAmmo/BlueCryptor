@@ -1,3 +1,82 @@
+# Internal Oracle Cerner Repo
+
+This is an internal copy/fork of the public repo from github.com - https://github.com/Kitura/BlueCryptor
+
+The goal/hope is that this is a temporary fork while waiting for the main repo to make necessary/required updates to continue building with the latest/newest build tools.
+
+## Process
+
+To update/contribute to this repo, the process is shortened - and relying on true testing taking place via the consuming components / applications.
+
+### Contributing
+
+To contribute / update the repo, submit Pull Requests onto the `cerner-main` branch.
+
+### Branching
+
+##### Security
+
+The official branches are locked down just to prevent accidental modifications. Any changes done to cerner-release will require modifying the Settings for this repo to remove restrictions on the branch. Please make sure to reapply the restrictions when done.
+
+#### `cerner-main`
+
+Our "custom" code that goes ontop of the official code from the primary code repository.
+
+#### `cerner-release`
+
+When this branch is pushed / updated, a new "release" is published to the internal cocoapod spec repo.
+
+**Make sure to tag each published version**
+
+_ONLY PUSH/MODIFY THIS BRANCH WHEN RELEASING A NEW VERSION OF THIS COMPONENT_
+
+### Versioning
+
+Each 'custom' version should append `-cerner` to indicate it's a "cerner only" release in our internal cocoapod spec repo.
+
+Version the base version with the correlating version from the original public repo.
+
+#### Example
+
+If the base public release is `1.2.3`, the internal release that addresses the necessary issue(s) would be `1.2.3-cerner`.
+
+Subsequent Cerner releases on the same version would append a version number after the `-cerner` postfix: `1.2.3-cerner3`, etc.
+
+### Tagging
+
+When releasing a new version, make sure to do a github Release describing the changes in the release, etc.
+
+
+#### New Public Version Released
+
+If the main repo publishes a new release, that does not address the necessary changes to stop using this internal version, an updated internal release should be done.
+
+1. Do a hard reset of the `cerner-main` branch to the new base release of the original repo (could be to `main` or `master` or to a version tagged commit)
+2. Cherry-pick applicable commits from the old `cerner-main`
+3. If any changes to the old commits are necessary, do a new Pull Request onto `cerner-main` INSTEAD OF cherry-picking
+
+In general, every internal release should contain at least 3 commits:
+
+1. Initial commit preparing the internal version of the repo:
+  * These updates to the README.md
+  * Pull Request Template
+  * Jenkinsfile
+  * Podspec updates to point to this repo (if necessary)
+2. Necessary changes to fix issues or enable building, etc.
+3. Setting the vew version to publish
+
+Keeping each commit separate increases the odds that just cherry picking will work for future updates (except for the new version setting).
+
+&nbsp;
+
+
+# -- Original README.md From Public Repo --
+
+&nbsp;
+
+&nbsp;
+
+
 <p align="center">
     <a href="https://www.kitura.io/packages.html#all">
     <img src="https://img.shields.io/badge/docs-kitura.io-1FBCE4.svg" alt="APIDoc">
