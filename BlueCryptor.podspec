@@ -8,11 +8,11 @@ s.author     = "IBM & Kitura Project Authors"
 s.module_name  = 'Cryptor'
 
 s.requires_arc = true
-s.swift_version = '5.1'
-s.osx.deployment_target = "10.11"
-s.ios.deployment_target = "10.0"
-s.tvos.deployment_target = "10.0"
-s.watchos.deployment_target = "2.0"
+s.swift_version = '5.2'
+s.osx.deployment_target = "11.5"
+s.ios.deployment_target = "14.5"
+s.tvos.deployment_target = "14.5"
+s.watchos.deployment_target = "7.5"
 s.source   = { :git => "https://github.cerner.com/careaware-connect/Kitura-BlueCryptor-ios-lib.git", :tag => s.version }
 s.source_files = "Sources/Cryptor/*.swift"
 s.pod_target_xcconfig =  {
