@@ -30,27 +30,35 @@ public protocol CryptoDigest {
 /// Extension to the CryptoDigest to return the digest appropriate to the selected algorithm.
 ///
 extension CryptoDigest {
-	
-    /// An MD2 digest of this object
-    public var md2: Self {
-		return self.digest(using: .md2)
-	}
-	
-    /// An MD4 digest of this object
-    public var md4: Self {
-		return self.digest(using: .md4)
-	}
-	
-    /// An MD5 digest of this object
-    public var md5: Self {
-		return self.digest(using: .md5)
- 	}
-	
+    
+    // Only available on Linux as Apple platforms consider them cryptographically insecure
+    #if os(Linux)
+        /// An MD4 digest of this object
+        public var md4: Self {
+            return self.digest(using: .md4)
+        }
+        
+        /// An MD5 digest of this object
+        public var md5: Self {
+            return self.digest(using: .md5)
+        }
+    #endif
+    
+    /// An MD5 digest of this object. Called out as "insecure" as it should not be used for cryptographic purposes
+    public var md5_insecure: Self {
+        return self.digest(using: .md5_insecure)
+    }
+    
     /// An SHA1 digest of this object
     public var sha1: Self {
 		return self.digest(using: .sha1)
 	}
 	
+    /// An SHA1 digest of this object. Called out as "insecure" as it should not be used for cryptographic purposes
+    public var sha1_insecure: Self {
+        return self.digest(using: .sha1_insecure)
+    }
+    
     /// An SHA224 digest of this object
     public var sha224: Self {
 		return self.digest(using: .sha224)
